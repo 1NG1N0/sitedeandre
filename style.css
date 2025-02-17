@@ -1,0 +1,163 @@
+@charset "UTF-8";
+
+
+
+
+h1{ color: #001e6c;
+    text-align: justify;
+    text-align: left;
+    padding-left: 220px;
+    padding-top: 100px;
+    
+    
+}
+
+h1#sobre{
+  color: #001e6c;
+  font-size: 30px;
+  padding-top: 200px;
+
+}
+
+h1#forum{
+  color: #001e6c;
+  font-size: 30px;
+  padding-top: 150px;
+}
+
+h1#conteudos{
+  color: #001e6c;
+  font-size: 30px;
+  padding-left: 600px;
+  padding-top: 200px;
+}
+
+h3{ color: #001e6c;
+    text-align: justify;
+    text-align: center;
+    padding-top: 40px;
+    
+}
+
+h2{ color: #001e6c;
+    text-align: justify;
+    text-align: center;
+    
+}
+
+p{
+    color: #333;
+    font-size: 20px;
+    text-align: center;
+    text-align: justify;
+    width: 1000px;
+    padding: 10px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+img {
+  border-radius: 10px;
+  
+}
+
+.img-estudo{
+  display: inline-block;
+ margin-left: 235px;
+ 
+}
+
+ html{
+  scroll-behavior: smooth;
+ }
+
+ .container {
+  max-width: 1080px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+
+ }
+ 
+ header{
+  background-color: #ffb71d;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: fixed;
+ }
+
+
+ .logo{
+  width: 25%;
+ }
+
+ .entrar{
+    width: 25%;
+ }
+
+
+
+ *{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+ }
+ 
+ .menu nav a {
+  width: 50%;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 20px;  
+  padding-right: 50px;
+  position: relative;
+  top: 0;
+ }
+
+ .menu nav a::after{
+  content: " ";
+  width: 0px;
+  height: 4px;
+  background-color: #9FC131;
+  transition: 0.5s;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  transition: width 0.5;
+  
+}
+  
+.menu nav a:hover::after{
+  width: 60px;
+}
+
+ .entrar{
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  
+ }
+
+ .entrar button i{
+  font-size: 20px;
+ }
+
+ .container5{
+  display: flex;
+  margin: 0;
+ }
+
+ img.texto{
+  text-align: justify;
+ }
+
+#linha-horizontal{
+  width: 100%;
+    border: 1px solid #ffecb7;
+    margin: 0;
+    
+}
+

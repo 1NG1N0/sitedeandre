@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórum</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      .container-forum {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Cabeçalho do Fórum */
+.forum-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.forum-header h1 {
+  color: #001e6c;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Layout do Fórum */
+.forum-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+/* Área de Perguntas */
+.perguntas-container {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  width: 50%;
+  min-width: 250px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+
+/* Área de Respostas */
+.respostas-container {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  width: 50%;
+  min-width: 250px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+div.pergunta {
+  display: grid;
+  place-items: center;
+}
+
+/* Cards de Perguntas/Respostas */
+.card {
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.2s;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  text-align: center;
+}
+
+.card-pergunta {
+  cursor: pointer;
+  border-left: 4px solid #001e6c;
+  text-align: center;
+}
+
+.card-resposta {
+  margin-left: 30px;
+  background: #ffffff;
+  text-align: center;
+}
+
+/* Formulários */
+.forum-form {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  resize: vertical;
+  font-size: 14px;
+  text-align: center;
+}
+
+button {
+  background-color: #001e6c;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #00308a;
+}
+
+/* Informações do Usuário */
+.user-info {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.selected {
+  background-color: #e8f0fe;
+  border-color: #001e6c;
+}
+    </style>
+</head>
+<body style="background-image: url(fundo-inicial6.png); font-family: Arial, sans-serif;>
+    
+    <link rel="icon" href="Gabarita-Enem-logo.png" type="image/png">
+
+</head>
+<body style="background-image: url(fundo-inicial6.png);">
+
+<header>
+ <div class="container">
+         <div class="logo"><img src="Gabarita-Enem-logo.png" width="150px"></div>
+                <div class="menu">
+                  <nav>
+                    <a href="http://127.0.0.1:3000/TCC - ENEM/TelaInicial.html"><b>Sobre</b></a>
+                    <a href="http://127.0.0.1:3000/TCC - ENEM/Forum.html"><b>Fórum</b></a>
+                      <a href="http://127.0.0.1:3000/TCC - ENEM/conteudos3.html"><b>Conteúdos</b></a>
+                  </nav> 
+                  
+                </div>
+                <div class="entrar">
+                    <abbr title="Login"><a href="http://127.0.0.1:3000/TCC - ENEM/tela-de-login.html"><img src="User.png" 
+                        width="40px"></a></abbr>
+               </div>
+ </div>
+ 
+</header>
+
+
+<div class="entrar">
+ <a href="http://127.0.0.1:3000/TCC - ENEM/tela-de-login.html"></a>
+</div></a>
+
+
+
+
+<section id="forum">
+  <div class="container3">
+    <h1>Fórum de Discussão</h1>
+        <p>O fórum é um local criado para discursões entre os usuários do site e tirar suas dúvidas entre si. 
+          Havendo uma troca de perguntas e respostas, o que torna a interação didática e produtiva.
+
+        </p>
+
+         <p>Assim, o site se torna um local ainda mais efetivo para o ensino, onde quem tem dúvidas, pode 
+        tirá-las sem precisar navegar em outros lugares e quem tem conhecimento pode responde-las a 
+        qualquer momento, estando em qualquer lugar.
+         </p>
+  </div> 
+ 
+</section>
+
+</header>
+
+
+
+  <section id="forum">
+      <div class="container-forum">
+          <div class="forum-header">
+              
+              <p>Tire suas dúvidas e ajude outros estudantes</p>
+          </div>
+
+          <div class="forum-layout">
+              <!-- Coluna de Perguntas -->
+              <div class="perguntas-container">
+                  <h2>Perguntas Recentes</h2>
+                  <div id="lista-perguntas"></div>
+
+                  <div class="forum-form">
+                      <h3>Faça uma nova pergunta</h3>
+                      <form id="form-nova-pergunta">
+                          <div class="form-group">
+                              <textarea id="nova-pergunta" placeholder="Descreva sua dúvida em detalhes..."
+                                  required></textarea>
+                          </div>
+                          <button type="submit">Enviar Pergunta</button>
+                      </form>
+                  </div>
+              </div>
+
+              <!-- Coluna de Respostas -->
+              <div class="respostas-container">
+                  <h2>Respostas</h2>
+                  <div id="lista-respostas"></div>
+
+                  <div class="forum-form">
+                      <h3>Responder à pergunta</h3>
+                      <form id="form-nova-resposta">
+                          <div class="form-group">
+                              <textarea id="nova-resposta" placeholder="Escreva sua resposta aqui..."
+                                  required></textarea>
+                          </div>
+                          <button type="submit">Enviar Resposta</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+
+
+  <script>
+      // Sistema de Armazenamento
+      let forumData = {
+          perguntas: [],
+          respostas: [],
+          currentUser: 'Usuário Anônimo'
+      };
+
+      // Funções de Renderização
+      function renderizarPerguntas() {
+          const container = document.getElementById('lista-perguntas');
+          container.innerHTML = '';
+
+          forumData.perguntas.forEach((pergunta, index) => {
+              const card = document.createElement('div');
+              card.className = `card card-pergunta ${pergunta.selected ? 'selected' : ''}`;
+              card.dataset.id = pergunta.id;
+              card.innerHTML = `
+      <h3>${pergunta.titulo}</h3>
+      <p>${pergunta.conteudo}</p>
+      <div class="user-info">
+          Postado por: ${pergunta.autor} • ${pergunta.data}
+          <span style="float: right;">${pergunta.respostas} respostas</span>
+      </div>
+  `;
+
+              card.addEventListener('click', () => selecionarPergunta(pergunta.id));
+              container.appendChild(card);
+          });
+      }
+
+      function renderizarRespostas(perguntaId) {
+          const container = document.getElementById('lista-respostas');
+          container.innerHTML = '';
+
+          const respostas = forumData.respostas.filter(r => r.perguntaId === perguntaId);
+          respostas.forEach(resposta => {
+              const card = document.createElement('div');
+              card.className = 'card card-resposta';
+              card.innerHTML = `
+      <p>${resposta.conteudo}</p>
+      <div class="user-info">
+          Respondido por: ${resposta.autor} • ${resposta.data}
+      </div>
+  `;
+              container.appendChild(card);
+          });
+      }
+
+      // Funções de Controle
+      function selecionarPergunta(id) {
+          forumData.perguntas.forEach(p => p.selected = false);
+          const pergunta = forumData.perguntas.find(p => p.id === id);
+          pergunta.selected = true;
+          renderizarPerguntas();
+          renderizarRespostas(id);
+      }
+
+      // Event Listeners
+      document.getElementById('form-nova-pergunta').addEventListener('submit', function (e) {
+          e.preventDefault();
+          const conteudo = document.getElementById('nova-pergunta').value;
+
+          const novaPergunta = {
+              id: Date.now(),
+              titulo: conteudo.substring(0, 50) + (conteudo.length > 50 ? '...' : ''),
+              conteudo,
+              autor: forumData.currentUser,
+              data: new Date().toLocaleString(),
+              respostas: 0,
+              selected: false
+          };
+
+          forumData.perguntas.unshift(novaPergunta);
+          renderizarPerguntas();
+          this.reset();
+      });
+
+      document.getElementById('form-nova-resposta').addEventListener('submit', function (e) {
+          e.preventDefault();
+          const conteudo = document.getElementById('nova-resposta').value;
+          const perguntaAtiva = forumData.perguntas.find(p => p.selected);
+
+          if (!perguntaAtiva) {
+              alert('Selecione uma pergunta para responder!');
+              return;
+          }
+
+          const novaResposta = {
+              perguntaId: perguntaAtiva.id,
+              conteudo,
+              autor: forumData.currentUser,
+              data: new Date().toLocaleString()
+          };
+
+          forumData.respostas.push(novaResposta);
+          perguntaAtiva.respostas++;
+          renderizarRespostas(perguntaAtiva.id);
+          renderizarPerguntas();
+          this.reset();
+      });
+
+      // Pergunta de Exemplo
+
+      // Inicialização
+      renderizarPerguntas();
+  </script>
+
+
+</body>
+</html>

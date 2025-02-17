@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENEM</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #001e6c;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .matematica {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .biologia {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .quimica {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .iniciante01 {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        .novato {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        .novato01 {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+
+        h1 {
+            color: #001e6c;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        label {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .anotacao {
+            margin-top: 10px;
+            display: none;
+        }
+
+        .anotacao textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            resize: vertical;
+        }
+
+        .anotacao button {
+            margin-top: 10px;
+            padding: 8px 16px;
+            background-color: #001e6c;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            
+        }
+
+        .anotacao button:hover {
+            background-color: #0056b3;
+        }
+
+        .mostrar-anotacao {
+            margin-left: 10px;
+            font-size: 14px;
+            color: #3c58c5;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .mostrar-anotacao:hover {
+            color: #0056b3;
+        }
+
+        @media (max-width: 600px) {
+            .conteiner {
+                width: 100%;
+                padding: 15px;
+            }}
+
+    
+    </style>
+    
+    <link rel="icon" href="Gabarita-Enem-logo.png" type="image/png">
+</head>
+<body style="background-image: url(fundo-inicial6.png);">
+    
+<header>
+     <div class="container">
+             <div class="logo"><img src="Gabarita-Enem-logo.png" width="150px"></div>
+                    <div class="menu">
+                      <nav>
+                          <a href="http://127.0.0.1:3000/TCC - ENEM/TelaInicial.html"><b>Sobre</b></a>
+                          <a href="http://127.0.0.1:3000/TCC - ENEM/Forum.html"><b>Fórum</b></a>
+                          <a href="http://127.0.0.1:3000/TCC - ENEM/conteudos3.html"><b>Conteúdos</b></a>
+                      </nav> 
+                      
+                    </div>
+                    <div class="entrar">
+                        <abbr title="Login"><a href="http://127.0.0.1:3000/TCC - ENEM/tela-de-login.html"><img src="User.png" 
+                            width="40px"></a></abbr>
+                   </div>
+     </div>
+     
+</header>
+
+
+<div class="entrar">
+     <a href="http://127.0.0.1:3000/TCC - ENEM/tela-de-login.html"></a>
+</div></a>  
+
+<section id="conteudos">
+    <h1 id="conteudos">Conteúdos</h1>
+    <div class="matematica">
+        <div class="novato">
+            <h1>Matemática - Iniciante</h1>
+            <form>
+                <input type="checkbox" id="materia1" name="materia1" value="m1">
+                <label for="materia1">Número e suas operações básicas</label>
+                <span class="mostrar-anotacao" onclick="toggleAnotacao('anotacao1')">Adicionar anotação</span>
+                <div class="anotacao" id="anotacao1">
+                    <textarea placeholder="Escreva suas anotações aqui..."></textarea>
+                    <button onclick="salvarAnotacao('anotacao1')">Salvar</button>
+                </div>
+                <br />
+
+                <input type="checkbox" id="materia2" name="materia2" value="m2">
+                <label for="materia2">Habilidades mentais básicas</label>
+                <span class="mostrar-anotacao" onclick="toggleAnotacao('anotacao2')">Adicionar anotação</span>
+                <div class="anotacao" id="anotacao2">
+                    <textarea placeholder="Escreva suas anotações aqui..."></textarea>
+                    <button onclick="salvarAnotacao('anotacao2')">Salvar</button>
+                </div>
+                <br />
+
+                <input type="checkbox" id="materia3" name="materia3" value="m3">
+                <label for="materia3">Frações e suas propriedades</label>
+                <span class="mostrar-anotacao" onclick="toggleAnotacao('anotacao3')">Adicionar anotação</span>
+                <div class="anotacao" id="anotacao3">
+                    <textarea placeholder="Escreva suas anotações aqui..."></textarea>
+                    <button onclick="salvarAnotacao('anotacao3')">Salvar</button>
+                </div>
+                <br>
+
+                <input type="checkbox" id="materia4" name="materia4" value="m4">
+                <label for="materia4">MMC, MDC e fatorações</label>
+                <span class="mostrar-anotacao" onclick="toggleAnotacao('anotacao4')">Adicionar anotação</span>
+                <div class="anotacao" id="anotacao4">
+                    <textarea placeholder="Escreva suas anotações aqui..."></textarea>
+                    <button onclick="salvarAnotacao('anotacao4')">Salvar</button>
+                </div>
+                <br>
+
+                <input type="checkbox" id="materia4" name="materia4" value="m5">
+                <label for="materia4">Potenciação e radiciação</label>
+                <span class="mostrar-anotacao" onclick="toggleAnotacao('anotacao5')">Adicionar anotação</span>
+                <div class="anotacao" id="anotacao5">
+                    <textarea placeholder="Escreva suas anotações aqui..."></textarea>
+                    <button onclick="salvarAnotacao('anotacao5')">Salvar</button>
+                </div>
+                <br>
+            </form>
+        </div>
+        <div class="novato">
+            <h1>Matemática - Novato</h1>
+            <form>
+                <input type="checkbox" id="materia01" name="materia01" value="m01">
+                <label for="materia01">Grandezas e relações de proporcionalidade</label>
+                <span class="mostrar-anotacao" onclick="toggleAnotacao('anotacao6')">Adicionar anotação</span>
+                <div class="anotacao" id="anotacao6">
+                    <textarea placeholder="Escreva suas anotações aqui..."></textarea>
+                    <button onclick="salvarAnotacao('anotacao6')">Salvar</button>
+                </div>
+                <br>
+
+                <input type="checkbox" id="materia02" name="materia02" value="m02">
+                <label for="materia02">Regra de 3 simples e composta</label>
+                <span class="mostrar-anotacao" onclick="toggleAnotacao('anotacao7')">Adicionar anotação</span>
+                <div class="anotacao" id="anotacao7">
+                    <textarea placeholder="Escreva suas anotações aqui..."></textarea>
+                    <button onclick="salvarAnotacao('anotacao7')">Salvar</button>
+                </div>
+                <br>
+
+                <input type="checkbox" id="materia03" name="materia03" value="m03">
+                <label for="materia03">Porcentagem tradicional</label>
+                <span class="mostrar-anotacao" onclick="toggleAnotacao('anotacao8')">Adicionar anotação</span>
+                <div class="anotacao" id="anotacao8">
+                    <textarea placeholder="Escreva suas anotações aqui..."></textarea>
+                    <button onclick="salvarAnotacao('anotacao8')">Salvar</button>
+                </div>
+                <br>
+
+                <input type="checkbox" id="materia04" name="materia04" value="m04">
+                <label for="materia04">Porcentagem - Habilidades mentais</label>
+                <span class="mostrar-anotacao" onclick="toggleAnotacao('anotacao9')">Adicionar anotação</span>
+                <div class="anotacao" id="anotacao9">
+                    <textarea placeholder="Escreva suas anotações aqui..."></textarea>
+                    <button onclick="salvarAnotacao('anotacao9')">Salvar</button>
+                </div>
+                <br>
+
+                <input type="checkbox" id="materia05" name="materia05" value="m05">
+                <label for="materia05">Notação científica</label>
+                <span class="mostrar-anotacao" onclick="toggleAnotacao('anotacao10')">Adicionar anotação</span>
+                <div class="anotacao" id="anotacao10">
+                    <textarea placeholder="Escreva suas anotações aqui..."></textarea>
+                    <button onclick="salvarAnotacao('anotacao10')">Salvar</button>
+                </div>
+                <br>
+
+                <input type="checkbox" id="materia06" name="materia06" value="m06">
+                <label for="materia06">Unidades de medida e suas conversões</label>
+                <span class="mostrar-anotacao" onclick="toggleAnotacao('anotacao11')">Adicionar anotação</span>
+                <div class="anotacao" id="anotacao11">
+                    <textarea placeholder="Escreva suas anotações aqui..."></textarea>
+                    <button onclick="salvarAnotacao('anotacao11')">Salvar</button>
+                </div>
+                <br>
+
+                <input type="checkbox" id="materia07" name="materia07" value="m07">
+                <label for="materia07">Vazão</label>
+                <span class="mostrar-anotacao" onclick="toggleAnotacao('anotacao12')">Adicionar anotação</span>
+                <div class="anotacao" id="anotacao12">
+                    <textarea placeholder="Escreva suas anotações aqui..."></textarea>
+                    <button onclick="salvarAnotacao('anotacao12')">Salvar</button>
+                </div>
+                <br>
+
+                <input type="checkbox" id="materia08" name="materia08" value="m08">
+                <label for="materia08">Escalas lineares, superficiais e volumétricas</label>
+                <span class="mostrar-anotacao" onclick="toggleAnotacao('anotacao13')">Adicionar anotação</span>
+                <div class="anotacao" id="anotacao13">
+                    <textarea placeholder="Escreva suas anotações aqui..."></textarea>
+                    <button onclick="salvarAnotacao('anotacao13')">Salvar</button>
+                </div>
+                <br>
+
+                <input type="checkbox" id="materia09" name="materia09" value="m09">
+                <label for="materia09">Gráficos, tabelas e analises de dados</label>
+                <span class="mostrar-anotacao" onclick="toggleAnotacao('anotacao14')">Adicionar anotação</span>
+                <div class="anotacao" id="anotacao14">
+                    <textarea placeholder="Escreva suas anotações aqui..."></textarea>
+                    <button onclick="salvarAnotacao('anotacao14')">Salvar</button>
+                </div>
+                <br>
+
+                <input type="checkbox" id="materia10" name="materia10" value="m10">
+                <label for="materia10">Matemática financeira básica</label>
+                <span class="mostrar-anotacao" onclick="toggleAnotacao('anotacao15')">Adicionar anotação</span>
+                <div class="anotacao" id="anotacao15">
+                    <textarea placeholder="Escreva suas anotações aqui..."></textarea>
+                    <button onclick="salvarAnotacao('anotacao15')">Salvar</button>
+                </div>
+                <br>
+
+                <input type="checkbox" id="materia11" name="materia11" value="m11">
+                <label for="materia10">Juros simples, aumentos e descontos</label>
+                <span class="mostrar-anotacao" onclick="toggleAnotacao('anotacao16')">Adicionar anotação</span>
+                <div class="anotacao" id="anotacao16">
+                    <textarea placeholder="Escreva suas anotações aqui..."></textarea>
+                    <button onclick="salvarAnotacao('anotacao16')">Salvar</button>
+                </div>
+                <br>
+            </form>
+        </div>
+    </div>
+    
+    <div class="biologia">
+        <div class="iniciante01">
+            <h1>Biologia - Iniciante</h1>
+            <form>
+                <input type="checkbox" id="materia01" name="materia01" value="m01">
+                <label for="materia01">Citologia e moleculas da vida</label>
+                <span class="mostrar-anotacao" onclick="toggleAnotacao('anotacao17')">Adicionar anotação</span>
+                <div class="anotacao" id="anotacao17">
+                    <textarea placeholder="Escreva suas anotações aqui..."></textarea>
+                    <button onclick="salvarAnotacao('anotacao17')">Salvar</button>
+                </div>
+                <br>
+
+            </form>
+        </div>
+        <div class="novato01">
+            <h1>Biologia - Novato</h1>         
+            <form>
+                <input type="checkbox" id="materia01" name="materia01" value="m01">
+                <label for="materia01">Metabolismo Energético</label>
+                <span class="mostrar-anotacao" onclick="toggleAnotacao('anotacao18')">Adicionar anotação</span>
+                <div class="anotacao" id="anotacao18">
+                    <textarea placeholder="Escreva suas anotações aqui..."></textarea>
+                    <button onclick="salvarAnotacao('anotacao18')">Salvar</button>
+                </div>
+                <br>
+
+                <input type="checkbox" id="materia01" name="materia01" value="m01">
+                <label for="materia01">Biologia Molecular</label>
+                <span class="mostrar-anotacao" onclick="toggleAnotacao('anotacao19')">Adicionar anotação</span>
+                <div class="anotacao" id="anotacao19">
+                    <textarea placeholder="Escreva suas anotações aqui..."></textarea>
+                    <button onclick="salvarAnotacao('anotacao19')">Salvar</button>
+                </div>
+                <br>
+
+                <input type="checkbox" id="materia01" name="materia01" value="m01">
+                <label for="materia01">Evolução, forma e função dos seres vivos</label>
+                <span class="mostrar-anotacao" onclick="toggleAnotacao('anotacao20')">Adicionar anotação</span>
+                <div class="anotacao" id="anotacao20">
+                    <textarea placeholder="Escreva suas anotações aqui..."></textarea>
+                    <button onclick="salvarAnotacao('anotacao20')">Salvar</button>
+                </div>
+                <br>
+            </form>
+
+        </div>
+
+    </div>
+    <div class="quimica">
+        <div class="iniciante01">
+            <h1>Química - Iniciante</h1>
+            <form>
+                <input type="checkbox" id="materia01" name="materia01" value="m01">
+                <label for="materia01">Propriedades da matéria</label>
+                <span class="mostrar-anotacao" onclick="toggleAnotacao('anotacao21')">Adicionar anotação</span>
+                <div class="anotacao" id="anotacao21">
+                    <textarea placeholder="Escreva suas anotações aqui..."></textarea>
+                    <button onclick="salvarAnotacao('anotacao21')">Salvar</button>
+                </div>
+                <br>
+            </form>
+        </div>
+        <div class="novato01">
+            <h1>Química - Novato</h1>    
+            <form>
+                <input type="checkbox" id="materia01" name="materia01" value="m01">
+                <label for="materia01">Processos de separação de misturas</label>
+                <span class="mostrar-anotacao" onclick="toggleAnotacao('anotacao22')">Adicionar anotação</span>
+                <div class="anotacao" id="anotacao22">
+                    <textarea placeholder="Escreva suas anotações aqui..."></textarea>
+                    <button onclick="salvarAnotacao('anotacao22')">Salvar</button>
+                </div>
+                <br>
+
+                <input type="checkbox" id="materia02" name="materia02" value="m02">
+                <label for="materia02">Atomística</label>
+                <span class="mostrar-anotacao" onclick="toggleAnotacao('anotacao23')">Adicionar anotação</span>
+                <div class="anotacao" id="anotacao23">
+                    <textarea placeholder="Escreva suas anotações aqui..."></textarea>
+                    <button onclick="salvarAnotacao('anotacao23')">Salvar</button>
+                </div>
+                <br>
+
+                <input type="checkbox" id="materia03" name="materia03" value="m03">
+                <label for="materia03">Tabela periódica e suas propriedades</label>
+                <span class="mostrar-anotacao" onclick="toggleAnotacao('anotacao24')">Adicionar anotação</span>
+                <div class="anotacao" id="anotacao24">
+                    <textarea placeholder="Escreva suas anotações aqui..."></textarea>
+                    <button onclick="salvarAnotacao('anotacao24')">Salvar</button>
+                </div>
+                <br>
+
+                <input type="checkbox" id="materia04" name="materia04" value="m04">
+                <label for="materia04">Ligações químicas interatômicas e intermoleculares</label>
+                <span class="mostrar-anotacao" onclick="toggleAnotacao('anotacao25')">Adicionar anotação</span>
+                <div class="anotacao" id="anotacao25">
+                    <textarea placeholder="Escreva suas anotações aqui..."></textarea>
+                    <button onclick="salvarAnotacao('anotacao25')">Salvar</button>
+                </div>
+                <br>
+
+                <input type="checkbox" id="materia05" name="materia05" value="m05">
+                <label for="materia05">Polaridade, Geometria Molecular e propriedades dos compostos</label>
+                <span class="mostrar-anotacao" onclick="toggleAnotacao('anotacao26')">Adicionar anotação</span>
+                <div class="anotacao" id="anotacao26">
+                    <textarea placeholder="Escreva suas anotações aqui..."></textarea>
+                    <button onclick="salvarAnotacao('anotacao26')">Salvar</button>
+                </div>
+                <br>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function toggleAnotacao(id) {
+            const anotacao = document.getElementById(id);
+            anotacao.style.display = anotacao.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function salvarAnotacao(id) {
+            const textarea = document.querySelector(`#${id} textarea`);
+            alert(`Anotação salva: ${textarea.value}`);
+        }
+    </script>
+    </section>
+
+
+
+</body>
+</html>
